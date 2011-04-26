@@ -1,0 +1,432 @@
+#LyX 1.6.7 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass book
+\use_default_options true
+\language english
+\inputencoding auto
+\font_roman newcent
+\font_sans avant
+\font_typewriter courier
+\font_default_family sfdefault
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\float_placement H
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\leftmargin 1cm
+\topmargin 1.5cm
+\rightmargin 1cm
+\bottommargin 1.5cm
+\footskip 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language swedish
+\papercolumns 1
+\papersides 1
+\paperpagestyle plain
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\noun on
+Robust
+\noun default
+ 
+\noun on
+File
+\noun default
+ 
+\noun on
+Copy
+\noun default
+ 
+\noun on
+Front
+\noun default
+ 
+\noun on
+End
+\end_layout
+
+\begin_layout Author
+User Manual
+\end_layout
+
+\begin_layout Date
+November 2010
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Prerequisites
+\end_layout
+
+\begin_layout Standard
+In order to run the 
+\emph on
+Robust File Copy Front End (RFCFE)
+\emph default
+ one must have 
+\emph on
+robocopy
+\emph default
+ installed and configured in the system path and Microsoft .NET Framework
+ 4.
+\end_layout
+
+\begin_layout Standard
+Robocopy was introduced as a standard feature in Windows Vista, 7, Server
+ 2008 and Server 2008 R2.
+ For older releases of Windows it can be installed as a part of the 
+\begin_inset CommandInset href
+LatexCommand href
+name "Windows Resource Kit"
+target "http://www.microsoft.com/downloads/en/details.aspx?familyid=9d467a69-57ff-4ae7-96ee-b18c4790cffd&displaylang=en"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+If one doesn't have it installed already the Microsoft .NET Framework 4 can
+ be downloaded from the 
+\begin_inset CommandInset href
+LatexCommand href
+name "Microsoft website"
+target "http://www.microsoft.com/downloads/en/details.aspx?displaylang=en&FamilyID=0a391abd-25c1-4fc0-919f-b21f31ab88b7"
+
+\end_inset
+
+ or through the Windows Update service.
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Usage
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+RFCFE
+\emph default
+ was meant to be as user friendly as possible, hence here will be listed
+ only a few things that the user should pay attention to.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename RFCFE_Doc_Pics/pic1.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the above picture the user interface with the 
+\emph on
+General
+\emph default
+ tab selected is shown.
+\end_layout
+
+\begin_layout Standard
+The first field is a text box in which the source, or the directory from
+ which the files should be copied, has to be entered.
+ The mentioned directory (or drive) can be entered manually, or browsed
+ for by using the 
+\emph on
+Browse
+\emph default
+ button.
+\end_layout
+
+\begin_layout Standard
+The second field is the same as the previous one but with the exception
+ that this one should contain the destination, or the directory to which
+ the files should be copied.
+ This field's input can also be entered manually, or browsed for.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color red
+IMPORTANT: The paths to the source and destination directories have to be
+ put inside the quotation marks if the path itself contains spaces.
+
+\color inherit
+ 
+\end_layout
+
+\begin_layout Standard
+The example is shown on the picture below:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename RFCFE_Doc_Pics/pic2.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The third field represents the arguments, or command switches, that should
+ be sent to the robocopy command.
+ The full list of robocopy switches can be found by choosing the 
+\emph on
+Robocopy Help
+\emph default
+ option located within the 
+\emph on
+Help
+\emph default
+ menu.
+\end_layout
+
+\begin_layout Standard
+Note that the mentioned list was retrieved from the output of 
+\begin_inset Quotes sld
+\end_inset
+
+
+\family typewriter
+robocopy /?
+\family default
+
+\begin_inset Quotes srd
+\end_inset
+
+ command on Windows 7, and the switches may differ accross the different
+ Windows versions, so the most accurate way of getting the switches one
+ can use is to run previously mentioned command to list them for their current
+ platform.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By default the logging is disabled altogether, but one can enable it by
+ ticking the 
+\emph on
+Enable Logging
+\emph default
+ check box.
+\end_layout
+
+\begin_layout Standard
+Once this check box is checked the field which should contain the location
+ of the log file will be enabled.
+ If nothing is changed the output of the robocopy command will be stored
+ inside the file 
+\emph on
+robocopy.log
+\emph default
+, located within the application directory.
+ If the 
+\emph on
+Browse
+\emph default
+ button is clicked the 
+\emph on
+File Save
+\emph default
+ dialog will be opened providing the option to choose the location and name
+ for the log file.
+\end_layout
+
+\begin_layout Standard
+Other options are to send output to log file overwriting the existing one
+ or appending it to it, and to send command output to the console window
+ as well as to the log file.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Options to exclude files or directories from copying are located on the
+ 
+\emph on
+Excluded files and directories
+\emph default
+ tab.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename RFCFE_Doc_Pics/pic3.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Each file or directory has to be entered inside the quotation marks, and
+ all of them have to be put on the same line, delimited by spaces.
+\end_layout
+
+\begin_layout Standard
+There are options to browse for files or directories using the 
+\emph on
+Browse
+\emph default
+ buttons, and the option to clear the content of the text boxes by clicking
+ on the 
+\emph on
+Clear
+\emph default
+ button for each text box.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Once all the parameters are set there is option to create Windows batch
+ file, which can be used later, by clicking on the 
+\emph on
+Save Script
+\emph default
+ button or by choosing the 
+\emph on
+Save Script
+\emph default
+ option from the 
+\emph on
+File
+\emph default
+ menu.
+\end_layout
+
+\begin_layout Standard
+The final option is to run 
+\emph on
+robocopy
+\emph default
+ command using the chosen parameters by clicking on the 
+\emph on
+Start Backup
+\emph default
+ button.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If everything is configured correctly the application will start copying
+ files and the 
+\emph on
+robocopy
+\emph default
+ console window will be shown, as on the picture below.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename RFCFE_Doc_Pics/pic4.png
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+License
+\end_layout
+
+\begin_layout Standard
+Robust File Copy Front End is copyrighted by Almir Dzinovic, and is released
+ under the GNU/GPL v3 License.
+\end_layout
+
+\begin_layout Standard
+The whole text of the license is distributed along with the application,
+ and can be found inside the application directory, stored within the License.txt
+ file.
+\end_layout
+
+\end_body
+\end_document

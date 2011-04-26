@@ -1,0 +1,36 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="RFCFE.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SourceDir" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\</Value>
+    </Setting>
+    <Setting Name="DestDir" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\FILESERVER\SharedDir</Value>
+    </Setting>
+    <Setting Name="Switches" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/mir /r:5 /w:10 /xo /v</Value>
+    </Setting>
+    <Setting Name="ExclDirs" Type="System.String" Scope="User">
+      <Value Profile="(Default)">"$RECYCLE.BIN" "System Volume Information" "Recovery"</Value>
+    </Setting>
+    <Setting Name="ExclFiles" Type="System.String" Scope="User">
+      <Value Profile="(Default)">"desktop.ini" "Thumbs.db" "*.old"</Value>
+    </Setting>
+    <Setting Name="LogEnabled" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="LogFileLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">robocopy.log</Value>
+    </Setting>
+    <Setting Name="LogTee" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="LogOverwrite" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="LogAppend" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
