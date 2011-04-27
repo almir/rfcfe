@@ -1,5 +1,5 @@
 ; Installer script for Robust File Copy Front End
-; Copyright (C) 2010 Almir Dzinovic <almirdzin@gmail.com>
+; Copyright (C) 2010-2011 Almir Dzinovic <almir@dzinovic.net>
 ;
 ; This program is free software; you can redistribute it and/or modify it under
 ; the terms of the GNU General Public License as published by the Free Software
@@ -14,7 +14,7 @@
 [Setup]
 AppName=Robust File Copy Front End
 AppVerName=Robocopy Front End
-AppVersion=1.0.0.0
+AppVersion=1.1.0.0
 AppPublisher=Almir Dzinovic
 AppPublisherURL=http://rfcfe.blogspot.com/
 DefaultDirName={pf}\Robocopy Front End

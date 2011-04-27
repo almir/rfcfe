@@ -1,6 +1,6 @@
 ﻿/*
  * Robust File Copy Front End
- * Copyright (C) 2010 Almir Dzinovic <almirdzin@gmail.com>
+ * Copyright (C) 2010-2011 Almir Dzinovic <almir@dzinovic.net>
  * 
  * This program is free software; you can redistribute it and/or modify it under the
  * terms of the GNU General Public License as published by the Free Software
@@ -19,7 +19,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
