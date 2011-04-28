@@ -292,7 +292,7 @@ Excluded files and directories
 \noindent
 \align center
 \begin_inset Graphics
-	filename RFCFE_Doc_Pics/pic3.png
+	filename RFCFE_Doc_Pics/pic2.png
 
 \end_inset
 
@@ -342,6 +342,13 @@ File
 \end_layout
 
 \begin_layout Standard
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 The final option is to run 
 \emph on
 robocopy
@@ -355,6 +362,48 @@ Start Backup
 
 \begin_layout Standard
 \begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+There is also an option to start 
+\emph on
+robocopy
+\emph default
+ in a separate, independent, 
+\emph on
+Command Prompt 
+\emph default
+window, that can be activated by checking the 
+\emph on
+Start robocopy as an independent process
+\emph default
+ option from the 
+\emph on
+File
+\emph default
+ menu's 
+\emph on
+Options
+\emph default
+ submenu.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename RFCFE_Doc_Pics/pic3.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
 \end_inset
 
 
