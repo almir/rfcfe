@@ -119,7 +119,7 @@ target "http://www.microsoft.com/downloads/en/details.aspx?familyid=9d467a69-57f
 \end_layout
 
 \begin_layout Standard
-If one doesn't have it installed already the Microsoft .NET Framework 4 can
+If one doesn't have it installed already the Microsoft .NET Framework 2 can
  be downloaded from the 
 \begin_inset CommandInset href
 LatexCommand href
@@ -354,7 +354,7 @@ Start Backup
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage newpage
+\begin_inset space \hfill{}
 \end_inset
 
 
