@@ -143,7 +143,7 @@ namespace RFCFE
             this.generalToolStripMenuItem,
             this.excludedFilesAndDirectoriesToolStripMenuItem});
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.settingsToolStripMenuItem.Text = "&Options";
             // 
             // generalToolStripMenuItem
@@ -163,14 +163,14 @@ namespace RFCFE
             // saveScriptExitToolStripMenuItem
             // 
             this.saveScriptExitToolStripMenuItem.Name = "saveScriptExitToolStripMenuItem";
-            this.saveScriptExitToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.saveScriptExitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.saveScriptExitToolStripMenuItem.Text = "&Save Script";
             this.saveScriptExitToolStripMenuItem.Click += new System.EventHandler(this.SaveScriptClose);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -186,14 +186,14 @@ namespace RFCFE
             // robocopyHelpToolStripMenuItem
             // 
             this.robocopyHelpToolStripMenuItem.Name = "robocopyHelpToolStripMenuItem";
-            this.robocopyHelpToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.robocopyHelpToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.robocopyHelpToolStripMenuItem.Text = "&Robocopy Help";
             this.robocopyHelpToolStripMenuItem.Click += new System.EventHandler(this.robocopyHelpToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.aboutToolStripMenuItem.Text = "&About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 

@@ -118,5 +118,12 @@ namespace RFCFE
         {
             this.Close();
         }
+
+        private void creditsButton_Click(object sender, EventArgs e)
+        {
+            // Show the credits dialog
+            CreditsDialog form = new CreditsDialog();
+            form.Show();
+        }
     }
 }

@@ -16,7 +16,7 @@
 
 namespace RFCFE
 {
-    partial class HelpForm
+    partial class CreditsDialog
     {
         /// <summary>
         /// Required designer variable.
@@ -44,57 +44,57 @@ namespace RFCFE
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HelpForm));
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.HlpFrmClsBtn = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreditsDialog));
+            this.creditsTxtBox = new System.Windows.Forms.RichTextBox();
+            this.CrdDlgClsBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // creditsTxtBox
             // 
-            this.richTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.richTextBox1.DetectUrls = false;
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.richTextBox1.Font = new System.Drawing.Font("Lucida Console", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.richTextBox1.Location = new System.Drawing.Point(0, 0);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(651, 451);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            this.creditsTxtBox.BackColor = System.Drawing.SystemColors.Window;
+            this.creditsTxtBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.creditsTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.creditsTxtBox.Location = new System.Drawing.Point(0, 0);
+            this.creditsTxtBox.Name = "creditsTxtBox";
+            this.creditsTxtBox.ReadOnly = true;
+            this.creditsTxtBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.creditsTxtBox.Size = new System.Drawing.Size(432, 243);
+            this.creditsTxtBox.TabIndex = 0;
+            this.creditsTxtBox.Text = resources.GetString("creditsTxtBox.Text");
             // 
-            // HlpFrmClsBtn
+            // CrdDlgClsBtn
             // 
-            this.HlpFrmClsBtn.Location = new System.Drawing.Point(287, 457);
-            this.HlpFrmClsBtn.Name = "HlpFrmClsBtn";
-            this.HlpFrmClsBtn.Size = new System.Drawing.Size(75, 23);
-            this.HlpFrmClsBtn.TabIndex = 1;
-            this.HlpFrmClsBtn.Text = "&Close";
-            this.HlpFrmClsBtn.UseVisualStyleBackColor = true;
-            this.HlpFrmClsBtn.Click += new System.EventHandler(this.HlpFrmClsBtn_Click);
+            this.CrdDlgClsBtn.Location = new System.Drawing.Point(168, 249);
+            this.CrdDlgClsBtn.Name = "CrdDlgClsBtn";
+            this.CrdDlgClsBtn.Size = new System.Drawing.Size(75, 23);
+            this.CrdDlgClsBtn.TabIndex = 1;
+            this.CrdDlgClsBtn.Text = "&Close";
+            this.CrdDlgClsBtn.UseVisualStyleBackColor = true;
+            this.CrdDlgClsBtn.Click += new System.EventHandler(this.CrdDlgClsBtn_Click);
             // 
-            // HelpForm
+            // CreditsDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(651, 485);
-            this.Controls.Add(this.HlpFrmClsBtn);
-            this.Controls.Add(this.richTextBox1);
+            this.ClientSize = new System.Drawing.Size(432, 275);
+            this.Controls.Add(this.CrdDlgClsBtn);
+            this.Controls.Add(this.creditsTxtBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "HelpForm";
+            this.Name = "CreditsDialog";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Robust File Copy Help";
+            this.Text = "Credits";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button HlpFrmClsBtn;
+        private System.Windows.Forms.RichTextBox creditsTxtBox;
+        private System.Windows.Forms.Button CrdDlgClsBtn;
     }
 }
