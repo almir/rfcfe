@@ -1,4 +1,4 @@
-#LyX 1.6.7 created this file. For more info see http://www.lyx.org/
+#LyX 1.6.9 created this file. For more info see http://www.lyx.org/
 \lyxformat 345
 \begin_document
 \begin_header
@@ -101,7 +101,7 @@ Robust File Copy Front End (RFCFE)
 robocopy
 \emph default
  installed and configured in the system path and Microsoft .NET Framework
- 4.
+ 2.
 \end_layout
 
 \begin_layout Standard
@@ -124,7 +124,7 @@ If one doesn't have it installed already the Microsoft .NET Framework 4 can
 \begin_inset CommandInset href
 LatexCommand href
 name "Microsoft website"
-target "http://www.microsoft.com/downloads/en/details.aspx?displaylang=en&FamilyID=0a391abd-25c1-4fc0-919f-b21f31ab88b7"
+target "http://www.microsoft.com/downloads/en/details.aspx?familyid=0856EACB-4362-4B0D-8EDD-AAB15C5E04F5&displaylang=en"
 
 \end_inset
 
@@ -187,31 +187,6 @@ The second field is the same as the previous one but with the exception
 
 \begin_layout Standard
 \begin_inset space \hfill{}
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\color red
-IMPORTANT: The paths to the source and destination directories have to be
- put inside the quotation marks if the path itself contains spaces.
-
-\color inherit
- 
-\end_layout
-
-\begin_layout Standard
-The example is shown on the picture below:
-\end_layout
-
-\begin_layout Standard
-\noindent
-\align center
-\begin_inset Graphics
-	filename RFCFE_Doc_Pics/pic2.png
-
 \end_inset
 
 
