@@ -54,6 +54,28 @@ namespace RFCFE
             Properties.Settings.Default.Save();
         }
 
+        private string AddQuotations(string inString)
+        {
+            // Add the quotation marks to the directory path if there aren't any already
+            string retval;
+
+            if (inString.StartsWith("\""))
+            {
+                retval = inString;
+            }
+            else
+            {
+                retval = "\"" + inString;
+            }
+
+            if (!retval.EndsWith("\""))
+            {
+                retval = retval + "\"";
+            }
+
+            return retval;
+        }
+
         private void SrcBrwsButton_Click(object sender, EventArgs e)
         {
             // Open the browse dialog and populate the text box containing the source directory
@@ -83,12 +105,12 @@ namespace RFCFE
             StartButton.Enabled = false;
 
             // Set some strings for easier reference later
-            string source = SrcTxtBox.Text;
-            string destination = DestTxtBox.Text;
+            string source = AddQuotations(SrcTxtBox.Text);
+            string destination = AddQuotations(DestTxtBox.Text);
             string switches = SwitchesTxtBox.Text;
             string exclfiles = ExclFilesTxtBox.Text;
             string excldirs = ExclDirsTxtBox.Text;
-            string logfile = LogTxtBox.Text;
+            string logfile = AddQuotations(LogTxtBox.Text);
 
             // Start the robocopy process
             Process process = new Process();
@@ -348,7 +370,7 @@ namespace RFCFE
                 SaveFileDialog.FileName.Length > 0)
             {
                 string file = SaveFileDialog.FileName;
-                LogTxtBox.Text = "\"" + file + "\"";
+                LogTxtBox.Text = file;
             }
         }
 
@@ -394,12 +416,12 @@ namespace RFCFE
             {
                 // First set some strings for easier reference later
                 string file = SaveFileDialog.FileName;
-                string source = SrcTxtBox.Text;
-                string destination = DestTxtBox.Text;
+                string source = AddQuotations(SrcTxtBox.Text);
+                string destination = AddQuotations(DestTxtBox.Text);
                 string switches = SwitchesTxtBox.Text;
                 string exclfiles = ExclFilesTxtBox.Text;
                 string excldirs = ExclDirsTxtBox.Text;
-                string logfile = LogTxtBox.Text;
+                string logfile = AddQuotations(LogTxtBox.Text);
 
                 // Open the file for writing
                 TextWriter script = new StreamWriter(file);
@@ -410,107 +432,107 @@ namespace RFCFE
                 if (LogEnCB.Checked == true && LogTeeCB.Checked == true && LogOverwriteRB.Checked == true
                     && ExclDirsTxtBox.TextLength > 0 && ExclFilesTxtBox.TextLength > 0)
                 {
-                    script.WriteLine("robocopy " + source + " " + destination + " /xf " + exclfiles + " /xd " +
+                    script.WriteLine("robocopy.exe " + source + " " + destination + " /xf " + exclfiles + " /xd " +
                         excldirs + " /tee /log:" + logfile + " " + switches);
                 }
                 else if (LogEnCB.Checked == true && LogTeeCB.Checked == true && LogOverwriteRB.Checked == true
                     && ExclDirsTxtBox.TextLength > 0 && ExclFilesTxtBox.TextLength == 0)
                 {
-                    script.WriteLine("robocopy " + source + " " + destination + " /xd " + excldirs +
+                    script.WriteLine("robocopy.exe " + source + " " + destination + " /xd " + excldirs +
                         " /tee /log:" + logfile + " " + switches);
                 }
                 else if (LogEnCB.Checked == true && LogTeeCB.Checked == true && LogOverwriteRB.Checked == true
                     && ExclDirsTxtBox.TextLength == 0 && ExclFilesTxtBox.TextLength > 0)
                 {
-                    script.WriteLine("robocopy " + source + " " + destination + " /xf " + exclfiles + 
+                    script.WriteLine("robocopy.exe " + source + " " + destination + " /xf " + exclfiles + 
                         " /tee /log:" + logfile + " " + switches);
                 }
                 else if (LogEnCB.Checked == true && LogTeeCB.Checked == true && LogOverwriteRB.Checked == true
                     && ExclDirsTxtBox.TextLength == 0 && ExclFilesTxtBox.TextLength == 0)
                 {
-                    script.WriteLine("robocopy " + source + " " + destination + " /tee /log:" + logfile + " " + switches);
+                    script.WriteLine("robocopy.exe " + source + " " + destination + " /tee /log:" + logfile + " " + switches);
                 }
                 else if (LogEnCB.Checked == true && LogTeeCB.Checked == true && LogAppendRB.Checked == true
                     && ExclDirsTxtBox.TextLength > 0 && ExclFilesTxtBox.TextLength > 0)
                 {
-                    script.WriteLine("robocopy " + source + " " + destination + " /xf " + exclfiles + " /xd " +
+                    script.WriteLine("robocopy.exe " + source + " " + destination + " /xf " + exclfiles + " /xd " +
                         excldirs + " /tee /log+:" + logfile + " " + switches);
                 }
                 else if (LogEnCB.Checked == true && LogTeeCB.Checked == true && LogAppendRB.Checked == true
                     && ExclDirsTxtBox.TextLength > 0 && ExclFilesTxtBox.TextLength == 0)
                 {
-                    script.WriteLine("robocopy " + source + " " + destination + " /xd " + excldirs +
+                    script.WriteLine("robocopy.exe " + source + " " + destination + " /xd " + excldirs +
                         " /tee /log+:" + logfile + " " + switches);
                 }
                 else if (LogEnCB.Checked == true && LogTeeCB.Checked == true && LogAppendRB.Checked == true
                     && ExclDirsTxtBox.TextLength == 0 && ExclFilesTxtBox.TextLength > 0)
                 {
-                    script.WriteLine("robocopy " + source + " " + destination + " /xf " + exclfiles +
+                    script.WriteLine("robocopy.exe " + source + " " + destination + " /xf " + exclfiles +
                         " /tee /log+:" + logfile + " " + switches);
                 }
                 else if (LogEnCB.Checked == true && LogTeeCB.Checked == true && LogAppendRB.Checked == true
                     && ExclDirsTxtBox.TextLength == 0 && ExclFilesTxtBox.TextLength == 0)
                 {
-                    script.WriteLine("robocopy " + source + " " + destination + " /tee /log+:" + logfile + " " + switches);
+                    script.WriteLine("robocopy.exe " + source + " " + destination + " /tee /log+:" + logfile + " " + switches);
                 }
                 else if (LogEnCB.Checked == true && LogTeeCB.Checked == false && LogOverwriteRB.Checked == true
                     && ExclDirsTxtBox.TextLength > 0 && ExclFilesTxtBox.TextLength > 0)
                 {
-                    script.WriteLine("robocopy " + source + " " + destination + " /xf " + exclfiles + " /xd " +
+                    script.WriteLine("robocopy.exe " + source + " " + destination + " /xf " + exclfiles + " /xd " +
                         excldirs + " /log:" + logfile + " " + switches);
                 }
                 else if (LogEnCB.Checked == true && LogTeeCB.Checked == false && LogOverwriteRB.Checked == true
                     && ExclDirsTxtBox.TextLength > 0 && ExclFilesTxtBox.TextLength == 0)
                 {
-                    script.WriteLine("robocopy " + source + " " + destination + " /xd " + excldirs + " /log:" + logfile + " " + switches);
+                    script.WriteLine("robocopy.exe " + source + " " + destination + " /xd " + excldirs + " /log:" + logfile + " " + switches);
                 }
                 else if (LogEnCB.Checked == true && LogTeeCB.Checked == false && LogOverwriteRB.Checked == true
                     && ExclDirsTxtBox.TextLength == 0 && ExclFilesTxtBox.TextLength > 0)
                 {
-                    script.WriteLine("robocopy " + source + " " + destination + " /xf " + exclfiles + " /log:" + logfile + " " + switches);
+                    script.WriteLine("robocopy.exe " + source + " " + destination + " /xf " + exclfiles + " /log:" + logfile + " " + switches);
                 }
                 else if (LogEnCB.Checked == true && LogTeeCB.Checked == false && LogOverwriteRB.Checked == true
                     && ExclDirsTxtBox.TextLength == 0 && ExclFilesTxtBox.TextLength == 0)
                 {
-                    script.WriteLine("robocopy " + source + " " + destination + " /log:" + logfile + " " + switches);
+                    script.WriteLine("robocopy.exe " + source + " " + destination + " /log:" + logfile + " " + switches);
                 }
                 else if (LogEnCB.Checked == true && LogTeeCB.Checked == false && LogAppendRB.Checked == true
                     && ExclDirsTxtBox.TextLength > 0 && ExclFilesTxtBox.TextLength > 0)
                 {
-                    script.WriteLine("robocopy " + source + " " + destination + " /xf " + exclfiles + " /xd " +
+                    script.WriteLine("robocopy.exe " + source + " " + destination + " /xf " + exclfiles + " /xd " +
                         excldirs + " /log+:" + logfile + " " + switches);
                 }
                 else if (LogEnCB.Checked == true && LogTeeCB.Checked == false && LogAppendRB.Checked == true
                     && ExclDirsTxtBox.TextLength > 0 && ExclFilesTxtBox.TextLength == 0)
                 {
-                    script.WriteLine("robocopy " + source + " " + destination + " /xd " + excldirs + " /log+:" + logfile + " " + switches);
+                    script.WriteLine("robocopy.exe " + source + " " + destination + " /xd " + excldirs + " /log+:" + logfile + " " + switches);
                 }
                 else if (LogEnCB.Checked == true && LogTeeCB.Checked == false && LogAppendRB.Checked == true
                     && ExclDirsTxtBox.TextLength == 0 && ExclFilesTxtBox.TextLength > 0)
                 {
-                    script.WriteLine("robocopy " + source + " " + destination + " /xf " + exclfiles + " /log+:" + logfile + " " + switches);
+                    script.WriteLine("robocopy.exe " + source + " " + destination + " /xf " + exclfiles + " /log+:" + logfile + " " + switches);
                 }
                 else if (LogEnCB.Checked == true && LogTeeCB.Checked == false && LogAppendRB.Checked == true
                     && ExclDirsTxtBox.TextLength == 0 && ExclFilesTxtBox.TextLength == 0)
                 {
-                    script.WriteLine("robocopy " + source + " " + destination + " /log+:" + logfile + " " + switches);
+                    script.WriteLine("robocopy.exe " + source + " " + destination + " /log+:" + logfile + " " + switches);
                 }
                 else if (LogEnCB.Checked == false && ExclDirsTxtBox.TextLength > 0 && ExclFilesTxtBox.TextLength > 0)
                 {
-                    script.WriteLine("robocopy " + source + " " + destination + " /xf " + exclfiles + " /xd " +
+                    script.WriteLine("robocopy.exe " + source + " " + destination + " /xf " + exclfiles + " /xd " +
                         excldirs + " " + switches);
                 }
                 else if (LogEnCB.Checked == false && ExclDirsTxtBox.TextLength > 0 && ExclFilesTxtBox.TextLength == 0)
                 {
-                    script.WriteLine("robocopy " + source + " " + destination + " /xd " + excldirs + " " + switches);
+                    script.WriteLine("robocopy.exe " + source + " " + destination + " /xd " + excldirs + " " + switches);
                 }
                 else if (LogEnCB.Checked == false && ExclDirsTxtBox.TextLength == 0 && ExclFilesTxtBox.TextLength > 0)
                 {
-                    script.WriteLine("robocopy " + source + " " + destination + " /xf " + exclfiles + " " + switches);
+                    script.WriteLine("robocopy.exe " + source + " " + destination + " /xf " + exclfiles + " " + switches);
                 }
                 else
                 {
-                    script.WriteLine("robocopy " + source + " " + destination + " " + switches);
+                    script.WriteLine("robocopy.exe " + source + " " + destination + " " + switches);
                 }
                 // The standard exit line at the end
                 script.WriteLine(Environment.NewLine + "exit");
