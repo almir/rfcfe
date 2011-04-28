@@ -54,6 +54,8 @@ namespace RFCFE
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.excludedFilesAndDirectoriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.startRobocopyAsAnIndependentProcessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveScriptExitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -141,7 +143,9 @@ namespace RFCFE
             // 
             this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.generalToolStripMenuItem,
-            this.excludedFilesAndDirectoriesToolStripMenuItem});
+            this.excludedFilesAndDirectoriesToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.startRobocopyAsAnIndependentProcessToolStripMenuItem});
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             this.settingsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.settingsToolStripMenuItem.Text = "&Options";
@@ -149,16 +153,29 @@ namespace RFCFE
             // generalToolStripMenuItem
             // 
             this.generalToolStripMenuItem.Name = "generalToolStripMenuItem";
-            this.generalToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
+            this.generalToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
             this.generalToolStripMenuItem.Text = "General";
             this.generalToolStripMenuItem.Click += new System.EventHandler(this.generalToolStripMenuItem_Click);
             // 
             // excludedFilesAndDirectoriesToolStripMenuItem
             // 
             this.excludedFilesAndDirectoriesToolStripMenuItem.Name = "excludedFilesAndDirectoriesToolStripMenuItem";
-            this.excludedFilesAndDirectoriesToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
+            this.excludedFilesAndDirectoriesToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
             this.excludedFilesAndDirectoriesToolStripMenuItem.Text = "Excluded files and directories";
             this.excludedFilesAndDirectoriesToolStripMenuItem.Click += new System.EventHandler(this.excludedFilesAndDirectoriesToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(271, 6);
+            // 
+            // startRobocopyAsAnIndependentProcessToolStripMenuItem
+            // 
+            this.startRobocopyAsAnIndependentProcessToolStripMenuItem.CheckOnClick = true;
+            this.startRobocopyAsAnIndependentProcessToolStripMenuItem.Name = "startRobocopyAsAnIndependentProcessToolStripMenuItem";
+            this.startRobocopyAsAnIndependentProcessToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
+            this.startRobocopyAsAnIndependentProcessToolStripMenuItem.Text = "Start robocopy as an independent process";
+            this.startRobocopyAsAnIndependentProcessToolStripMenuItem.CheckedChanged += new System.EventHandler(this.startRobocopyAsAnIndependentProcessToolStripMenuItem_CheckedChanged);
             // 
             // saveScriptExitToolStripMenuItem
             // 
@@ -186,14 +203,14 @@ namespace RFCFE
             // robocopyHelpToolStripMenuItem
             // 
             this.robocopyHelpToolStripMenuItem.Name = "robocopyHelpToolStripMenuItem";
-            this.robocopyHelpToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.robocopyHelpToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.robocopyHelpToolStripMenuItem.Text = "&Robocopy Help";
             this.robocopyHelpToolStripMenuItem.Click += new System.EventHandler(this.robocopyHelpToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.aboutToolStripMenuItem.Text = "&About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -668,6 +685,8 @@ namespace RFCFE
         private System.Windows.Forms.TextBox ExclFilesTxtBox;
         private System.Windows.Forms.Button SaveClsBtn;
         private System.Windows.Forms.ToolStripMenuItem saveScriptExitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem startRobocopyAsAnIndependentProcessToolStripMenuItem;
     }
 }
 

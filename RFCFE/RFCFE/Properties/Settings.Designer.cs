@@ -142,5 +142,17 @@ namespace RFCFE.Properties {
                 this["LogAppend"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool IndProcessState {
+            get {
+                return ((bool)(this["IndProcessState"]));
+            }
+            set {
+                this["IndProcessState"] = value;
+            }
+        }
     }
 }

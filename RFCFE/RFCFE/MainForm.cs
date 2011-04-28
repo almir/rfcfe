@@ -46,6 +46,7 @@ namespace RFCFE
             LogTeeCB.Checked = Properties.Settings.Default.LogTee;
             LogOverwriteRB.Checked = Properties.Settings.Default.LogOverwrite;
             LogAppendRB.Checked = Properties.Settings.Default.LogAppend;
+            startRobocopyAsAnIndependentProcessToolStripMenuItem.Checked = Properties.Settings.Default.IndProcessState;
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -114,7 +115,6 @@ namespace RFCFE
 
             // Start the robocopy process
             Process process = new Process();
-            process.StartInfo.FileName = "robocopy.exe";
             // Check all the possible variables and populate the process arguments accordingly
             if (LogEnCB.Checked == true && LogTeeCB.Checked == true && LogOverwriteRB.Checked == true
                     && ExclDirsTxtBox.TextLength > 0 && ExclFilesTxtBox.TextLength > 0)
@@ -222,9 +222,20 @@ namespace RFCFE
                 process.StartInfo.Arguments = source + " " + destination + " " + switches;
             }
             process.StartInfo.UseShellExecute = false;
-            process.Start();
-            process.WaitForExit();
-            process.Close();
+
+            if (startRobocopyAsAnIndependentProcessToolStripMenuItem.Checked == true)
+            {
+                process.StartInfo.FileName = "cmd.exe";
+                process.StartInfo.Arguments = "/k robocopy.exe " + process.StartInfo.Arguments;
+                process.Start();
+            }
+            else
+            {
+                process.StartInfo.FileName = "robocopy.exe";
+                process.Start();
+                process.WaitForExit();
+                process.Close();
+            }
 
             // Reenable the button once the process has finished
             StartButton.Enabled = true;
@@ -546,6 +557,13 @@ namespace RFCFE
             // Show the About box
             AboutBox form = new AboutBox();
             form.Show();
+        }
+
+        private void startRobocopyAsAnIndependentProcessToolStripMenuItem_CheckedChanged(object sender, EventArgs e)
+        {
+            // Populate the boolean value indicating whether the option to start robocopy
+            // as an independent process is enabled or not in user settings
+            Properties.Settings.Default.IndProcessState = startRobocopyAsAnIndependentProcessToolStripMenuItem.Checked;
         }
     }
 }
