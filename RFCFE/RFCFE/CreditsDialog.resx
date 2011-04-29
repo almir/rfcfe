@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="creditsTxtBox.Text" xml:space="preserve">
+  <data name="textBoxCredits.Text" xml:space="preserve">
     <value>I wish to say thank you to all who helped make this project possible:
 the people who tested the application, those who gave suggestions about how
 the interface should look like, and even those who were just supportive.
@@ -125,7 +125,7 @@ the interface should look like, and even those who were just supportive.
 Special thanks to the people who helped by contributing their pieces of code in
 order to implement new features and fix bugs.
 
-The list of contributors:
+Contributors:
 
 Goran Katavic (elc@elc.info)</value>
   </data>
